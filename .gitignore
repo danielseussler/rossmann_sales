@@ -1,0 +1,9 @@
+# Ignore temporary Stan files created as part of compilation.
+*.hpp
+*.o
+*.exe
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class

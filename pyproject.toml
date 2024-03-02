@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "rossmann-sales"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Seussler <dseussler at outlook dot com>"]
+readme = "README.md"
+packages = [{include = "rossmann_sales", from="src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+polars = {extras = ["numpy", "pandas", "pyarrow", "xlsx2csv"], version = "^0.20.3"}
+cmdstanpy = {extras = ["all"], version = "^1.2.0"}
+arviz = "^0.17.0"
+jupyter = "^1.0.0"
+ipykernel = "^6.28.0"
+seaborn = "^0.13.1"
+loguru = "^0.7.2"
+pydantic = "^2.6.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
